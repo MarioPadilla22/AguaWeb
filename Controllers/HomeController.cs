@@ -21,13 +21,20 @@ namespace Agua.Controllers
             /// Aquí tienen que hacer todo
             /// La fecha que y los minutos vienen del formulario 
             /// Investigar Model Binding 
+            int r;
+            int bote=12;
+            int m;
+        DateTime hoy = DateTime.Today;
+        TimeSpan resta = ProximoCumple-hoy;
+        r = resta.Days;
+        m = minutos*bote*resta.Days;
 
-
-            ViewBag.Dias = 0;
-            ViewBag.Botellas = 0;
+            ViewBag.Dias = r;
+            ViewBag.Botellas = m;
 
             return View();
         }
 
     }
 }
+
